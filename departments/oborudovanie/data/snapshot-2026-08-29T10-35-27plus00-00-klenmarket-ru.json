@@ -1,7 +1,0 @@
-{
-  "taken_at": "2026-08-29T10:35:27+00:00",
-  "source": "klenmarket.ru",
-  "source_status": "unreachable",
-  "items": {},
-  "error": "URLError: <urlopen error timed out>"
-}
