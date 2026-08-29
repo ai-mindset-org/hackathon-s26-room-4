@@ -4,8 +4,9 @@
 Контракт снимка v2 (issue #4):
 {
   "taken_at": "ISO-8601", "source": "домен", "source_status": "ok|unreachable",
-  "items": {"sku": {"shop", "title", "price", "currency",
-                    "price_status": "listed|on_request|unknown", "in_stock"}}
+  "items": {"sku": {"shop", "title", "equipment_type" (optional), "price",
+                    "currency", "price_status": "listed|on_request|unknown",
+                    "in_stock"}}
 }
 
 Поддерживаются также:
@@ -21,6 +22,7 @@ def _norm_item(sku, raw):
         "sku": sku,
         "shop": raw.get("shop") or raw.get("source") or "",
         "title": raw.get("title") or sku,
+        "equipment_type": raw.get("equipment_type") or "",
         "price": raw.get("price"),
         "currency": raw.get("currency", ""),
         "price_status": raw.get("price_status", "listed"),
