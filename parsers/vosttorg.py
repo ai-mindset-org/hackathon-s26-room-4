@@ -29,8 +29,12 @@ URL = "https://vosttorg.ru/katalog/"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36")
 
-# Название товара — alt/title картинки, идёт раньше цены в разметке.
-TITLE = re.compile(r'class="ty-pict[^"]*"\s+alt="([^"]*)"')
+# id+название в одной паре: до 8 картинок в начале страницы (слайдер) — с
+# пустым alt и без своего product_id, поэтому раздельные списки id/alt едут
+# со сдвигом на них. Берём id и alt из ОДНОГО блока товара одним regex'ом.
+ID_TITLE = re.compile(
+    r'product_data\[(\d+)\]\[product_id\]"\s+value="\d+"\s*/>.*?'
+    r'class="ty-pict[^"]*"\s+alt="([^"]*)"', re.S)
 PRICE_LINE = re.compile(
     r'id="sec_[a-z_]*price_(\d+)"\s+class="ty-price-num">([^<]*)<')
 UNIT_LINE = re.compile(
@@ -53,14 +57,11 @@ def _digits_only(raw: str) -> float | None:
 
 
 def parse(page: str) -> list[dict]:
-    titles = TITLE.findall(page)
     prices = dict(PRICE_LINE.findall(page))
     units = dict(UNIT_LINE.findall(page))
 
-    ids = re.findall(r'product_data\[(\d+)\]\[product_id\]"\s+value="\d+"', page)
-
     items = []
-    for pid, title_raw in zip(ids, titles):
+    for pid, title_raw in ID_TITLE.findall(page):
         if pid not in prices:
             continue
         title = _html.unescape(title_raw).strip()

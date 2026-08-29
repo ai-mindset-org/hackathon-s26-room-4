@@ -1,0 +1,247 @@
+{
+ "taken_at": "2026-08-29T12:49:01",
+ "source": "АгроСбыт · объявления поставщиков",
+ "source_status": "ok",
+ "items": {
+  "kartofel-optom-sorta-praim-i-primabel": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Картофель оптом - сорта прайм и примабель · 19 ₽ / кг.",
+   "price": 19.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ogurec-saund-f1": {
+   "shop": "АгроСбыт: продавец 89270606681",
+   "title": "Огурец Саунд F1 · 45 ₽ / т.",
+   "price": 45.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "kartofel-optom-2": {
+   "shop": "АгроСбыт: продавец +7(922)0104232",
+   "title": "Картофель оптом · 14 ₽ / кг.",
+   "price": 14.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "pekinskaya-kapusta": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Пекинская капуста · 30 ₽ / кг.",
+   "price": 30.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "semennoi-kartofel-otlicnogo-kacestva": {
+   "shop": "АгроСбыт: продавец +7_920_834_7688",
+   "title": "Семенной картофель отличного качества · 15 ₽ / кг.",
+   "price": 15.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "pasternak": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Пастернак · 25 ₽ / кг.",
+   "price": 25.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "batternat-muskatnaya": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Баттернат мускатная · 12 ₽ / кг.",
+   "price": 12.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "tomat-slivovidnyi-krasnyi-teplicnyi": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Томат сливовидный красный тепличный · 120 ₽ / т.",
+   "price": 120.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "tomat-cerri-teplicnyi": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Томат черри тепличный · 280 ₽ / т.",
+   "price": 280.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "tomat-sredneplodnyi-kruglyi-krasnyi": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Томат среднеплодный круглый красный · 100 ₽ / т.",
+   "price": 100.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "tomat-rozovyi-teplicnyi": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Томат розовый тепличный · 100 ₽ / кг.",
+   "price": 100.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ogurec-teplicnyi-kolyucii-sredneplodnyi-svyatogor-premium": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Огурец тепличный колючий среднеплодный Святогор Премиум · 110 ₽ / кг.",
+   "price": 110.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "teplicnyi-ogurec-tsx-atlet-estafeta-pcelka": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Тепличный Огурец ТСХ (Атлет, Эстафета, Пчелка) · 140 ₽ / т.",
+   "price": 140.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ogurec-gruntovoi-kolyucii-korotkoplodnyi": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Огурец грунтовой колючий короткоплодный · 60 ₽ / кг.",
+   "price": 60.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ogurec-teplicnyi-kolyucii-korotkoplodnyi-valigora": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Огурец тепличный колючий короткоплодный Валигора · 140 ₽ / кг.",
+   "price": 140.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "ogurec-teplicnyi-kolyucii-korotkoplodnyi-byorn": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Огурец тепличный колючий короткоплодный Бъёрн · 120 ₽ / кг.",
+   "price": 120.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "teplicnyi-ogurec-gladkii-meva": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Тепличный Огурец Гладкий Мева · 90 ₽ / кг.",
+   "price": 90.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "cesnok-lucsaya-cena-mesyaca-ot-agrovia-s-dostavkoi": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Чеснок, лучшая цена месяца от Agrovia с доставкой · 240000 ₽ / т.",
+   "price": 240000.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "kartofel-optom-s-xozyaistv-sertifikaty-dostavka-po-rf": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Картофель оптом с хозяйств. Сертификаты. Доставка по РФ · 18 ₽ / т.",
+   "price": 18.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "cesnok-1": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Чеснок · 400 ₽ / кг.",
+   "price": 400.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "prodam-ili-obmenyayu-tykvu": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Продам или обменяю тыкву · 6 ₽ / кг.",
+   "price": 6.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "morkov": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Морковь · 8 ₽ / кг.",
+   "price": 8.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "prodam-tykvu-romantika": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Продам тыкву Романтика · 18 ₽ / кг.",
+   "price": 18.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "tykva-pluta": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Тыква Плуто · 10 ₽ / т.",
+   "price": 10.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "muskat-de-provans-francuzskaya-romaska": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Мускат де Прованс французская ромашка · 40 ₽ / т.",
+   "price": 40.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "kartofel-urozaya-2025-goda": {
+   "shop": "АгроСбыт: продавец +7920_834_76_88",
+   "title": "Картофель урожая 2025 года · 13 ₽ / кг.",
+   "price": 13.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "cesnok": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Чеснок · 250 ₽ / кг.",
+   "price": 250.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "prodam-cesnok-1": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "продам чеснок · 250 ₽ / кг.",
+   "price": 250.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "cesnok-lyubasa-1": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Чеснок Любаша · 250000 ₽ / т.",
+   "price": 250000.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "cesnok-ozimyi": {
+   "shop": "АгроСбыт: продавец (см. объявление)",
+   "title": "Чеснок озимый · 80000 ₽ / т.",
+   "price": 80000.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}

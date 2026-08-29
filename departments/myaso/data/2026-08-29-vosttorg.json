@@ -1,0 +1,199 @@
+{
+ "taken_at": "2026-08-29T12:49:04",
+ "source": "Восторг · каталог поставщика (опт)",
+ "source_status": "ok",
+ "items": {
+  "867": {
+   "shop": "Восторг",
+   "title": "Масло сливочное Ренферли 82,5% 400 г · за 1 шт.",
+   "price": 250.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "768": {
+   "shop": "Восторг",
+   "title": "Масло сливочное CREME Кондитер 82,5% 400 г · за 1 шт.",
+   "price": 325.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "413": {
+   "shop": "Восторг",
+   "title": "Моцарелла для пиццы Extra Topping · за 1 кг",
+   "price": 360.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "64": {
+   "shop": "Восторг",
+   "title": "Моцарелла Алти Экстра (Extra Alti) 50% ~2 кг белково-жировой продукт · за 1 кг",
+   "price": 475.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "188": {
+   "shop": "Восторг",
+   "title": "Конфеты Sorbon Мини-вафли Радуга 1,5 кг · за 1 шт.",
+   "price": 950.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "649": {
+   "shop": "Восторг",
+   "title": "Огурцы маринованные калибр 100/110 · за 1 шт.",
+   "price": 1750.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "123": {
+   "shop": "Восторг",
+   "title": "Сыр Чеддер Ред Молочный Мир 3,5 кг · за 1 кг",
+   "price": 710.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "399": {
+   "shop": "Восторг",
+   "title": "Спред растительно-жировой 72,5% 500 г · за 1 шт.",
+   "price": 140.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "527": {
+   "shop": "Восторг",
+   "title": "Уксус рисовый Tamaki Pro 20 л · за 1 шт.",
+   "price": 1180.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "324": {
+   "shop": "Восторг",
+   "title": "Крабовые палочки Снежный краб 500 г · за 1 шт.",
+   "price": 235.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "534": {
+   "shop": "Восторг",
+   "title": "Уксус рисовый Tamaki 470 мл · за 1 шт.",
+   "price": 75.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "436": {
+   "shop": "Восторг",
+   "title": "Клюква замороженная садовая Китай 10 кг · за 1 кг",
+   "price": 355.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "501": {
+   "shop": "Восторг",
+   "title": "Моцарелла Laime 40% брус 2,5 кг · за 1 кг",
+   "price": 620.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "1029": {
+   "shop": "Восторг",
+   "title": "Кремчиз Panda 72% · за 1 шт.",
+   "price": 645.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "510": {
+   "shop": "Восторг",
+   "title": "Уксус рисовый Marukai Premium 20 л · за 1 шт.",
+   "price": 1380.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "352": {
+   "shop": "Восторг",
+   "title": "Соус Tabasco красный 60 мл · за 1 шт.",
+   "price": 270.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "875": {
+   "shop": "Восторг",
+   "title": "Клубника замороженная 10 кг · за 1 кг",
+   "price": 153.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "1080": {
+   "shop": "Восторг",
+   "title": "Молоко ультрапастеризованное 3,2% ПРОМОЛАТ 1 литр оптом · за 1 л",
+   "price": 69.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "551": {
+   "shop": "Восторг",
+   "title": "Соус кимчи Tamaki 1.8 л для суши и роллов · за 1 шт.",
+   "price": 828.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "873": {
+   "shop": "Восторг",
+   "title": "Сыр Pecorino Sabah 46% круг · за 1 кг",
+   "price": 1620.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "556": {
+   "shop": "Восторг",
+   "title": "Соус Унаги Tamaki 1,8 л · за 1 шт.",
+   "price": 630.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "542": {
+   "shop": "Восторг",
+   "title": "Соус Шрирача Tamaki 1 л · за 1 шт.",
+   "price": 412.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "538": {
+   "shop": "Восторг",
+   "title": "Кунжут белый обжаренный 1 кг · за 1 шт.",
+   "price": 493.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "717": {
+   "shop": "Восторг",
+   "title": "Майонез Провансаль Столичный 67% 10 л АЛТИКО · за 1 шт.",
+   "price": 1284.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true
+  }
+ }
+}
