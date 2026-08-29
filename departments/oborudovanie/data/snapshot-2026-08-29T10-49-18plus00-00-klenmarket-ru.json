@@ -1,0 +1,31 @@
+{
+  "taken_at": "2026-08-29T10:49:18+00:00",
+  "source": "klenmarket.ru",
+  "source_status": "ok",
+  "items": {
+    "APACH-CHEF-LINE-SLDI7I4": {
+      "shop": "КленМаркет",
+      "title": "Плита индукционная встраиваемая 700 сер. APACH CHEF LINE SLDI7I4",
+      "price": 1081083.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "APACH-AC800DIG-PSDD": {
+      "shop": "КленМаркет",
+      "title": "Машина посудомоечная APACH AC800DIG PSDD купольная с помпой",
+      "price": 439417.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    },
+    "BREMA-CB-425W-HC": {
+      "shop": "КленМаркет",
+      "title": "Льдогенератор Brema CB 425W HC",
+      "price": 177713.0,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true
+    }
+  }
+}
