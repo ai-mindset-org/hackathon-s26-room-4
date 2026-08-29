@@ -88,7 +88,13 @@ def build_site(root=".", site="site"):
         elif s and s.get("n_snaps") and not href:
             stat = f'снимков: {s["n_snaps"]} — нужен второй для сравнения'
         if own_page.exists():
-            href = "../" + own_page.relative_to(root).as_posix()
+            # копия в site/ — на деплой уходит только эта папка;
+            # ссылку «назад» в копии приводим к корню сайта
+            own_copy = site_dir / f'dept-{meta["code"]}-own.html'
+            own_copy.write_text(
+                own_page.read_text(encoding="utf-8").replace("../../site/", ""),
+                encoding="utf-8")
+            href = own_copy.name
             cls = ""
             stat += " · своя страница ↗"
 
