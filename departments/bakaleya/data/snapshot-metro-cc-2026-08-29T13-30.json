@@ -1,0 +1,71 @@
+{
+ "taken_at": "2026-08-29T13:30:41",
+ "source": "online.metro-cc.ru",
+ "source_status": "ok",
+ "note": "живой парсинг 29.08 13:30, метод: python urllib + cookie jar (307 self-redirect), поиск /search?q= в SSR-HTML, цена из <meta itemprop=price> карточки товара (базовая цена без карты/акции), наличие из itemprop=availability=InStock; регион по умолчанию (Москва)",
+ "items": {
+  "muka-pizza-00-25kg": {
+   "shop": "online.metro-cc.ru",
+   "title": "Мука Molino Grassi Farina 00 Speedy H10 для пиццы, 25кг",
+   "price": 4199,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://online.metro-cc.ru/products/pshenichnaya-dlya-piccy-molino-grassi-25kg"
+  },
+  "maslo-rast-5l": {
+   "shop": "online.metro-cc.ru",
+   "title": "Масло подсолнечное Олейна рафинированное дезодорированное, 5л",
+   "price": 929,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://online.metro-cc.ru/products/maslo-podsolnechnoye-oleyna-rafinirovannoye-5l-92937"
+  },
+  "maslo-oliv-ev-1l": {
+   "shop": "online.metro-cc.ru",
+   "title": "METRO Chef Масло оливковое Extra Virgin нерафинированное, 1л (5 л нет в каталоге)",
+   "price": 1179,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://online.metro-cc.ru/products/1l-olivkovoe-maslo-metro-chef-extra-virgin"
+  },
+  "maslo-friture-10l": {
+   "shop": "online.metro-cc.ru",
+   "title": "Масло подсолнечное Pechagin Professional Для фритюра и жарки рафинированное дезодорированное, 10л",
+   "price": 1979,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://online.metro-cc.ru/products/maslo-podsolnechnoe-pechagin-prof-dlya-frityura-zharki-10l"
+  },
+  "pasta-casarecce-500g": {
+   "shop": "online.metro-cc.ru",
+   "title": "Макароны De Cecco Казаречча №88, 500г",
+   "price": 299,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://online.metro-cc.ru/products/500g-makarony-de-cecco-kazarechcha-88"
+  },
+  "pasta-linguine-450g": {
+   "shop": "online.metro-cc.ru",
+   "title": "Макароны лапша Шебекинские Лингвини №011 высший сорт, 450г (500 г нет в каталоге)",
+   "price": 79.9,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://online.metro-cc.ru/products/makarony-shebekinskie-011-lapsha-lingvini-450g"
+  },
+  "pasta-rigatoni-500g": {
+   "shop": "online.metro-cc.ru",
+   "title": "Макароны трубочки De Cecco Rigatoni №24, 500г",
+   "price": 289,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://online.metro-cc.ru/products/500g-rigatoni-de-cecco"
+  }
+ }
+}

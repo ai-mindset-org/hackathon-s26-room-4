@@ -1,0 +1,71 @@
+{
+ "taken_at": "2026-08-29T13:49:46",
+ "source": "fishport.com",
+ "source_status": "ok",
+ "note": "живой парсинг 29.08 13:49, refetch.py по URL снимка snapshot-fishport-2026-08-29T13-43.json",
+ "items": {
+  "muka-pizza-00-25kg": {
+   "shop": "fishport.com",
+   "title": "Мука MOLINO GRASSI ОО для пиццы из мягких сортов пшеницы 25 кг.",
+   "currency": "RUB",
+   "url": "https://fishport.com/horeca/catalog/dlya-pitstsy/muka-molino-grassi-oo-dlya-pitstsy-iz-myagkikh-sortov-pshenitsy-25-kg_1/",
+   "price": 3200.0,
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "maslo-rast-1l": {
+   "shop": "fishport.com",
+   "title": "Масло подсолнечное Олейна 1 л. (5-литровой фасовки в каталоге не найдено)",
+   "currency": "RUB",
+   "url": "https://fishport.com/horeca/catalog/podsolnechnoe/maslo-podsolnechnoe-oleyna-1-l/",
+   "price": 140.0,
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "maslo-oliv-ev-5l": {
+   "shop": "fishport.com",
+   "title": "Масло оливковое Fioreli Extra Virgin ж/б 5л",
+   "currency": "RUB",
+   "url": "https://fishport.com/horeca/catalog/olivkovoe/maslo-olivkovoe-fioreli-extra-virgin-zh-b-5l/",
+   "price": 1300.0,
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "maslo-friture-5l": {
+   "shop": "fishport.com",
+   "title": "Масло фритюрное Pechagin Professional 5 л.",
+   "currency": "RUB",
+   "url": "https://fishport.com/horeca/catalog/frityurnoe/maslo-frityurnoe-pechagin-professional-5-l/",
+   "price": 810.0,
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "pasta-casarecce-500g": {
+   "shop": "fishport.com",
+   "title": "Паста Casarecce — не найдена в каталоге fishport.com",
+   "currency": "RUB",
+   "url": "https://fishport.com/horeca/catalog/makaronnye-izdeliya/",
+   "price": null,
+   "price_status": "unknown",
+   "in_stock": false
+  },
+  "pasta-linguine-500g": {
+   "shop": "fishport.com",
+   "title": "№7 Лингвини Де Чекко 500 г.",
+   "currency": "RUB",
+   "url": "https://fishport.com/horeca/catalog/spagetti/7-lingvini-de-chekko-500-g/",
+   "price": 240.0,
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "pasta-rigatoni-500g": {
+   "shop": "fishport.com",
+   "title": "Паста Rigatoni — не найдена (есть только Penne Rigate Де Чекко 500 г.)",
+   "currency": "RUB",
+   "url": "https://fishport.com/horeca/catalog/makaronnye-izdeliya/",
+   "price": null,
+   "price_status": "unknown",
+   "in_stock": false
+  }
+ }
+}

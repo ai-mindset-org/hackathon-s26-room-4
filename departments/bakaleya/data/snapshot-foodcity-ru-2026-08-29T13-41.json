@@ -1,0 +1,71 @@
+{
+ "taken_at": "2026-08-29T13:41:00",
+ "source": "foodcity.ru",
+ "source_status": "ok",
+ "note": "живой парсинг 29.08 13:41, оптовый источник, метод: python urllib с браузерным User-Agent. foodcity.ru (главная и /wholesale) — Next.js JS-оболочка без товарных данных в теле HTTP-ответа. Найден рабочий поддомен dm.foodcity.ru (интернет-магазин арендаторов рынка «Фуд Сити», серверный рендеринг, HTTP 200, реальные карточки товаров с ценами вида «200-250 руб.»). Проверены разделы /byers (полный список департаментов) и /byers/bakaleya с подкатегориями (орехи, крупы, кофе, мёд, чай, бобовые, сухофрукты, японские продукты, суши, крупы Мистраль) и общий sitemap.xml (1544 URL, включая полный список /product/*). Ни муки, ни растительного/оливкового/фритюрного масла, ни сухих макарон (казаречче/лингвини/ригатони) в каталоге нет — есть только «сливочное масло» (сливочное, не растительное) и «оливки» (консервация, не масло). Поиск /search?q=... не возвращает результатов ни по одному из запросов. Прямые URL /byers/bakaleya/masla, /muka, /makaronnye-izdeliya — HTTP 404. Источник доступен и содержит реальные товары и цены, но ни одна из 7 искомых позиций в каталоге не представлена — считаем их unknown, а не ошибкой доступа.",
+ "items": {
+  "muka-pizza-00-25kg": {
+   "shop": "foodcity.ru",
+   "title": "Мука тип 00 для пиццы, мешок 25 кг",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://dm.foodcity.ru/byers/bakaleya"
+  },
+  "maslo-rast-5l": {
+   "shop": "foodcity.ru",
+   "title": "Масло подсолнечное рафинированное, канистра 5 л",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://dm.foodcity.ru/byers/bakaleya"
+  },
+  "maslo-oliv-ev-1l": {
+   "shop": "foodcity.ru",
+   "title": "Масло оливковое Extra Virgin, 1 л",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://dm.foodcity.ru/byers/bakaleya"
+  },
+  "maslo-friture-5l": {
+   "shop": "foodcity.ru",
+   "title": "Масло фритюрное, канистра 5 л",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://dm.foodcity.ru/byers/bakaleya"
+  },
+  "pasta-casarecce-500g": {
+   "shop": "foodcity.ru",
+   "title": "Макароны Казаречче, 500 г",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://dm.foodcity.ru/byers/bakaleya"
+  },
+  "pasta-linguine-500g": {
+   "shop": "foodcity.ru",
+   "title": "Макароны Лингвини, 500 г",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://dm.foodcity.ru/byers/bakaleya"
+  },
+  "pasta-rigatoni-500g": {
+   "shop": "foodcity.ru",
+   "title": "Макароны Ригатони, 500 г",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://dm.foodcity.ru/byers/bakaleya"
+  }
+ }
+}

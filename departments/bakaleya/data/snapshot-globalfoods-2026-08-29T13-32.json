@@ -1,0 +1,71 @@
+{
+ "taken_at": "2026-08-29T13:32:25",
+ "source": "globalfoods.ru",
+ "source_status": "ok",
+ "note": "живой парсинг 29.08 13:32, метод: python urllib, браузерный User-Agent, разбор HTML категорий /catalog/bakaleya/makarony/*, /catalog/bakaleya/muka/, /catalog/masla/*. Сайт отдаёт HTTP 200 с карточками (название, код, остаток), но цены видны только после входа в личный кабинет («Чтобы добавить товар в корзину — Войдите»); ни одной цены в теле нет, поэтому price=null, price_status=on_request. in_stock — по остатку на витрине.",
+ "items": {
+  "muka-pizza-00-25kg": {
+   "shop": "globalfoods.ru",
+   "title": "Мука для пиццы 00 тип из мягких сортов 25кг/меш Molino Grassi Италия (КОД 86813)",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": true,
+   "url": "https://globalfoods.ru/goods/20021/"
+  },
+  "maslo-rast-5l": {
+   "shop": "globalfoods.ru",
+   "title": "Масло подсолнечное рафинированное 5л пл/бут Sunny Gold Россия (КОД 50457)",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": true,
+   "url": "https://globalfoods.ru/goods/18879/"
+  },
+  "maslo-oliv-ev-1l": {
+   "shop": "globalfoods.ru",
+   "title": "Масло оливковое Extra Virgin 1л пл/бут Monterreal Испания (КОД 60999) — 1 л, 5 л в каталоге нет",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": true,
+   "url": "https://globalfoods.ru/goods/42090/"
+  },
+  "maslo-friture-5l": {
+   "shop": "globalfoods.ru",
+   "title": "Масло фритюрное подсолнечное 5л пл/б Печагин Россия (КОД 98304) — 5 л",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": true,
+   "url": "https://globalfoods.ru/goods/19278/"
+  },
+  "pasta-casarecce-500g": {
+   "shop": "globalfoods.ru",
+   "title": "Макароны Казаречче №88 500гр De Cecco Италия (КОД 84753)",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": true,
+   "url": "https://globalfoods.ru/goods/24094/"
+  },
+  "pasta-linguine-500g": {
+   "shop": "globalfoods.ru",
+   "title": "Макароны Лингвини №7 500гр De Cecco Италия (КОД 47738)",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": true,
+   "url": "https://globalfoods.ru/goods/19223/"
+  },
+  "pasta-rigatoni-500g": {
+   "shop": "globalfoods.ru",
+   "title": "Макароны Ригатони №24 500гр De Cecco Италия (КОД 47023)",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "on_request",
+   "in_stock": false,
+   "url": "https://globalfoods.ru/goods/21288/"
+  }
+ }
+}

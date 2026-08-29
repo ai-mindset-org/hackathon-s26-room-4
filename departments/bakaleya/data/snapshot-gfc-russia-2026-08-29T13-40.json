@@ -1,0 +1,71 @@
+{
+  "taken_at": "2026-08-29T13:40:00",
+  "source": "gfc-russia.ru",
+  "source_status": "ok",
+  "note": "живой парсинг 29.08 13:40, оптовый источник HoReCa (GFC-Russia), метод: urllib + regex по JSON-LD Offer/price в теле карточки товара",
+  "items": {
+    "muka-pizza-00-25kg": {
+      "shop": "gfc-russia.ru",
+      "title": "Мука для пиццы (мягкие сорта) Молино Грасси 25кг",
+      "price": 2853,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": false,
+      "url": "https://gfc-russia.ru/catalog/bakaleya/myka/23607-muka-dlya-piccy-myagkie-sorta-molino-grassi-25kg/"
+    },
+    "maslo-rast-5l": {
+      "shop": "gfc-russia.ru",
+      "title": "Масло подсолнечное Санни Голд 5л, 3шт/кор",
+      "price": 757,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true,
+      "url": "https://gfc-russia.ru/catalog/bakaleya/masla-rastitelnye/24604-maslo-podsolnechnoe-sanni-gold-5l-3sht-kor"
+    },
+    "maslo-oliv-ev-1l": {
+      "shop": "gfc-russia.ru",
+      "title": "Масло оливковое Extra Virgin Glafkos 1л ж/б, 12шт/кор",
+      "price": 3127,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": false,
+      "url": "https://gfc-russia.ru/catalog/bakaleya/masla-rastitelnye/235165-maslo-olivkovoe-extra-virgin-glafkos-1l-zh-b-12sht-kor"
+    },
+    "maslo-friture-10l": {
+      "shop": "gfc-russia.ru",
+      "title": "Масло фритюрное Печагин Профи 10л",
+      "price": 1845,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true,
+      "url": "https://gfc-russia.ru/catalog/bakaleya/masla-rastitelnye/23696-maslo-frityurnoe-pechagin-10-l-1-sht/"
+    },
+    "pasta-rigatoni-500g": {
+      "shop": "gfc-russia.ru",
+      "title": "Макароны Ригатони №019 Delverde 500гр, 20шт/кор",
+      "price": 122,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": false,
+      "url": "https://gfc-russia.ru/catalog/bakaleya/makarony-pasta/21768-makarony-rigatoni-019-delverde-500gr-20sht-kor"
+    },
+    "pasta-casarecce-700g": {
+      "shop": "gfc-russia.ru",
+      "title": "Макароны Казаречче яичные PastaPasta 700гр, 12шт/кор",
+      "price": 415,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": false,
+      "url": "https://gfc-russia.ru/catalog/bakaleya/makarony-pasta/236843-makarony-kazarechche-yaichnye-pastapasta-700gr-12sht-kor"
+    },
+    "pasta-linguine-450g": {
+      "shop": "gfc-russia.ru",
+      "title": "Макароны Barilla Лингвини Ригате 450г*24",
+      "price": null,
+      "currency": "RUB",
+      "price_status": "on_request",
+      "in_stock": false,
+      "url": "https://gfc-russia.ru/catalog/bakaleya/makarony-pasta/202620-makarony-barilla-lingvini-rigate-450g-24/"
+    }
+  }
+}
