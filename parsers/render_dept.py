@@ -410,8 +410,16 @@ def render_html(products: list[dict], snapshots: dict[str, dict], data_dir: str)
     products_sorted = sorted(products, key=lambda p: (p["pct"] is None, -(p["pct"] or -999)))
     rows = "\n".join(render_product(p) for p in products_sorted)
 
-    ok_sources = [s for s, snap in snapshots.items() if snap.get("source_status") == "ok"]
-    silent = [s for s, snap in snapshots.items() if snap.get("source_status") != "ok"]
+    # В departments/myaso/data параллельно пишут другие отделы (в момент
+    # сборки там нашлись каталоги овощей/бакалеи/молочки — чужие снимки,
+    # попавшие не в свою папку). Для честного счёта эта страница отдела
+    # мяса/рыбы/курицы считает только источники из своей же роли-таблицы,
+    # а про случайных соседей говорит отдельной строкой, а не молчит.
+    dept_snapshots = {s: v for s, v in snapshots.items() if s in SOURCE_META}
+    foreign = sorted(s for s in snapshots if s not in SOURCE_META)
+
+    ok_sources = [s for s, snap in dept_snapshots.items() if snap.get("source_status") == "ok"]
+    silent = [s for s, snap in dept_snapshots.items() if snap.get("source_status") != "ok"]
     actionable_srcs = [s for s in ok_sources if SOURCE_META.get(s, {}).get("actionable")]
     benchmark_srcs = [s for s, m in SOURCE_META.items() if m.get("role") == "эталон" and s in ok_sources]
     n_standalone = sum(1 for p in products if p["key"].startswith("standalone-"))
@@ -430,12 +438,19 @@ def render_html(products: list[dict], snapshots: dict[str, dict], data_dir: str)
         f'{_html.escape(", ".join(sorted(names)))} — {_html.escape(why)}'
         for why, names in bench_groups.items())
 
+    foreign_html = ""
+    if foreign:
+        foreign_html = (f'<div class="row">ℹ️ ещё <b>{len(foreign)}</b> файла в этой папке — '
+                        'снимки других отделов (овощи/бакалея/молочка), сюда попали по ошибке '
+                        'параллельного сбора; эта страница их не считает и не показывает.</div>')
+
     honesty = f"""<div class="honesty">
-<div class="row"><b>{len(ok_sources)} из {len(snapshots)}</b> источников ответили сегодня.</div>
+<div class="row"><b>{len(ok_sources)} из {len(dept_snapshots)}</b> источников мяса/рыбы/курицы ответили сегодня.</div>
 {silent_html}
 <div class="row"><b>{len(actionable_srcs)}</b> из них — реальные предложения поставщиков
 (Фуд Сити, ВкусВилл, Fishnet); Москва-розница — не поставщик, а верхняя граница цены для сравнения.</div>
 <div class="row"><b>{len(benchmark_srcs)}</b> эталона в сравнение цен не идут: {bench_why or "нет данных"}.</div>
+{foreign_html}
 <div class="row">Товаров без пары для сравнения (только один поставщик на позицию): <b>{n_standalone}</b> —
 они всё равно в списке выше, просто без бейджа выгоды.</div>
 </div>"""
@@ -477,7 +492,10 @@ def main(argv: list[str]) -> int:
     html_out = render_html(products, snapshots, data_dir)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html_out, encoding="utf-8")
-    print(f"товаров: {len(products)} · источников: {len(snapshots)} → {out_path}")
+    known = sum(1 for s in snapshots if s in SOURCE_META)
+    foreign = len(snapshots) - known
+    extra = f" (+{foreign} чужих файлов в папке, не учтены)" if foreign else ""
+    print(f"товаров: {len(products)} · источников отдела: {known}{extra} → {out_path}")
     return 0
 
 

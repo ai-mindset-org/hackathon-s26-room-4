@@ -187,7 +187,17 @@ def to_per_kg(title: str, price: float, source: str = "") -> tuple[float | None,
     kilos = value if unit in ("кг", "kg", "л") else value / 1000
     if kilos <= 0:
         return None, "вес не разобрался"
-    return round(price / kilos, 2), f"из цены за {match.group(0)}"
+
+    per_kg = round(price / kilos, 2)
+
+    # Санитарный предел. Еда не стоит 25 000 ₽ за килограмм и не стоит 5 ₽:
+    # такие числа означают, что вес из названия взят не тот — «Сыр 15 г» в
+    # описании дал 24 900 ₽/кг, и инструмент подал это как разброс 6817%.
+    # Число вне коридора не выбрасывается, а отправляется человеку с причиной.
+    if not (20 <= per_kg <= 20000):
+        return None, (f"после приведения вышло {per_kg:,.0f} ₽/кг — "
+                      f"вес в названии похож на ошибку".replace(",", " "))
+    return per_kg, f"из цены за {match.group(0)}"
 
 
 def build_per_kg(snapshots: list[dict]) -> dict:
