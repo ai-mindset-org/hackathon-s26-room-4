@@ -1,14 +1,17 @@
 # Дайджест изменений (2026-08-22 → 2026-08-29)
 
-Источники: доступно **11 из 12**. ⚠️ картина неполная!
+Источники: доступно **15 из 16**. ⚠️ картина неполная!
 Пороги подсветки: 🔴 ≥ 10% · 🟡 ≥ 5% · 🟢 подешевело на 5% и глубже (правило заказчика K4UR)
 
-## model:bakaleya-supplier
-- 🔴 maslo-oliv-ev-5l: 6 900 → 7 700, **+11.6%** ↑
-- 🟡 muka-pizza-00-25kg: 2 150 → 2 280, **+6.0%** ↑
-- maslo-friture-10l: 1 980 → 2 040, **+3.0%** ↑
-- 🟡 pasta-casarecce-500g: **пропал из наличия**
-- pasta-rigatoni-500g: цена не сравнивается (listed/RUB → on_request/RUB)
+## fishport.com
+
+## gfc-russia.ru
+
+## online.metro-cc.ru
+
+## swlife.ru
+
+## vkusvill.ru
 
 ## gfc-russia.ru/catalog/moloko-syr-yaytsa
 - 🟢 gfc-cremette-hochland-22kg: 1 331 → 1 090, **−18.1%** ↓
@@ -63,8 +66,15 @@
 ## tebiz.ru
 - avokado-import-usd-kg: 2.20 → 2.10, **−4.5%** ↓
 
-Без изменений: 5 позиций — свернуто.
+Без изменений: 38 позиций — свернуто.
 
 ## Один товар в разных магазинах (сегодня)
 
-- ⚠️ без данных сегодня: ec.europa.eu (1 из 12)
+- maslo-friture-10l: от 1 822.10 (swlife.ru) до 1 979 (online.metro-cc.ru) RUB — разброс **+8.6%** по 3 магазинам
+- maslo-oliv-ev-1l: от 1 179 (online.metro-cc.ru) до 3 127 (gfc-russia.ru) RUB — разброс **+165.2%** по 3 магазинам
+- maslo-oliv-ev-5l: от 1 300 (fishport.com) до 4 160 (swlife.ru) RUB — разброс **+220%** по 2 магазинам
+- maslo-rast-1l: от 140 (fishport.com) до 165 (vkusvill.ru) RUB — разброс **+17.9%** по 2 магазинам
+- maslo-rast-5l: от 757 (gfc-russia.ru) до 929 (online.metro-cc.ru) RUB — разброс **+22.7%** по 3 магазинам
+- muka-pizza-00-25kg: от 2 853 (gfc-russia.ru) до 4 199 (online.metro-cc.ru) RUB — разброс **+47.2%** по 3 магазинам
+- pasta-rigatoni-500g: от 122 (gfc-russia.ru) до 289 (online.metro-cc.ru) RUB — разброс **+136.9%** по 2 магазинам
+- ⚠️ без данных сегодня: ec.europa.eu (1 из 16)

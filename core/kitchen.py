@@ -127,6 +127,13 @@ def build_site(root=".", site="site"):
         (site_dir / "digest.html").write_text(
             render.to_html(d_all, title="Общий дайджест кухни"), encoding="utf-8")
         (site_dir / "digest.md").write_text(dg.to_markdown(d_all), encoding="utf-8")
+        try:
+            from core.excel import write_xlsx
+            write_xlsx(all_pairs, site_dir / "kitchen-digest.xlsx")
+            cta = ('<a class="dash-link" href="kitchen-digest.xlsx">'
+                   'Excel для закупки ⤓</a> ' + cta)
+        except ImportError:
+            pass
         cta = ('<a class="pill" href="digest.html">Общий дайджест кухни ↗</a> '
                + cta)
 
