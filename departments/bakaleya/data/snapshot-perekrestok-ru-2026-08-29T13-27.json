@@ -1,0 +1,7 @@
+{
+  "taken_at": "2026-08-29T13:27:42",
+  "source": "perekrestok.ru",
+  "source_status": "unreachable",
+  "note": "живой парсинг 29.08 13:27, метод: urllib (UA Chrome) -> /cat/search HTTP 200 тело 1871 байт (JS-заглушка), /api/customer/1.4.1.0/catalog/product/feed HTTP 403; playwright -> редирект на капчу /xpvnsulc (ID запроса 7RkTBB80I8c1). Резерв lenta.com: /search и /api-gateway HTTP 401. Цены не получены, позиции не считаются пропавшими.",
+  "items": {}
+}

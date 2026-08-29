@@ -1,0 +1,71 @@
+{
+ "taken_at": "2026-08-29T13:48:00+03:00",
+ "source": "swlife.ru",
+ "source_status": "ok",
+ "note": "живой парсинг 29.08 13:48, HoReCa-фудсервис Свит Лайф, цены открыты без логина. Метод: urllib GET к /index.php?route=product/search&search=<q> (OpenCart smartsearch), парсинг блоков .product-layout для кандидатов, затем прямой GET карточки товара и извлечение <meta itemprop=\"price\"> и <link itemprop=\"availability\">. Мука указана в ценнике сайта за кг (₽/кг), фасовка мешка 25кг оценочная по названию товара — итоговую цену за мешок сайт не показывает отдельным полем, поэтому записана цена как есть (за кг), без домысливания. Пасту casarecce/linguine/rigatoni через поиск сайта (в т.ч. запросы 'макароны', 'pasta', конкретные названия форм) найти не удалось — в каталоге не обнаружено ни у De Cecco, ни у других брендов.",
+ "items": {
+  "muka-pizza-per-kg": {
+   "shop": "swlife.ru",
+   "title": "Мука Пшеничная СуперМука для Пиццы Premium 25кг — ЦЕНА ЗА КГ, мешок 25 кг, не тип 00 Molino Grassi",
+   "price": 90.91,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://swlife.ru/101666"
+  },
+  "maslo-rast-5l": {
+   "shop": "swlife.ru",
+   "title": "Масло Подсолнечное Золотая Семечка Рафинированное Россия 5л",
+   "price": 835.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://swlife.ru/46602"
+  },
+  "maslo-oliv-ev-5l": {
+   "shop": "swlife.ru",
+   "title": "Масло Оливковое Ranieri Extra Virgin Нерафинированное 5л",
+   "price": 4160.0,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://swlife.ru/120338"
+  },
+  "maslo-friture-10l": {
+   "shop": "swlife.ru",
+   "title": "Масло Pechagin Professional для фритюра 10 л",
+   "price": 1822.1,
+   "currency": "RUB",
+   "price_status": "listed",
+   "in_stock": true,
+   "url": "https://swlife.ru/80234"
+  },
+  "pasta-casarecce-500g": {
+   "shop": "swlife.ru",
+   "title": "Не найдено на swlife.ru: паста Casarecce (De Cecco/другие бренды) — поиск по 'казаречче', 'казарекке', 'pasta', 'макароны' не дал совпадений",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://swlife.ru/index.php?route=product/search&search=%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D1%87%D1%87%D0%B5"
+  },
+  "pasta-linguine-500g": {
+   "shop": "swlife.ru",
+   "title": "Не найдено на swlife.ru: паста Linguine (De Cecco/другие бренды) — поиск по 'лингвине', 'pasta', 'макароны' не дал совпадений",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://swlife.ru/index.php?route=product/search&search=%D0%BB%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD%D0%B5"
+  },
+  "pasta-rigatoni-500g": {
+   "shop": "swlife.ru",
+   "title": "Не найдено на swlife.ru: паста Rigatoni (De Cecco/другие бренды) — поиск по 'ригатони', 'pasta', 'макароны' не дал совпадений",
+   "price": null,
+   "currency": "RUB",
+   "price_status": "unknown",
+   "in_stock": false,
+   "url": "https://swlife.ru/index.php?route=product/search&search=%D1%80%D0%B8%D0%B3%D0%B0%D1%82%D0%BE%D0%BD%D0%B8"
+  }
+ }
+}

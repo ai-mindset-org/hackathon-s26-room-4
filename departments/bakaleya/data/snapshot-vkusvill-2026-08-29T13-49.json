@@ -1,0 +1,71 @@
+{
+ "taken_at": "2026-08-29T13:49:48",
+ "source": "vkusvill.ru",
+ "source_status": "ok",
+ "note": "живой парсинг 29.08 13:49, refetch.py по URL снимка snapshot-vkusvill-2026-08-29T13-28.json",
+ "items": {
+  "muka-pizza-00-25kg": {
+   "shop": "vkusvill.ru",
+   "title": "Мука для пиццы тип 00 — не найдена (поиск «мука»/«мука для пиццы»: только бытовая пшеничная 1–2 кг, тип 00 отсутствует)",
+   "currency": "RUB",
+   "url": "https://vkusvill.ru/search/?q=%D0%BC%D1%83%D0%BA%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%B8%D1%86%D1%86%D1%8B",
+   "price": null,
+   "price_status": "unknown",
+   "in_stock": false
+  },
+  "maslo-rast-1l": {
+   "shop": "vkusvill.ru",
+   "title": "Масло подсолнечное рафинированное, 1 л (ближайшее; 5 л нет)",
+   "currency": "RUB",
+   "url": "https://vkusvill.ru/goods/maslo-podsolnechnoe-rafinirovannoe-37147/",
+   "price": 165.0,
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "maslo-oliv-ev-1l": {
+   "shop": "vkusvill.ru",
+   "title": "Масло оливковое Canoliva Extra Virgin стекло 1 л Испания (5 л нет)",
+   "currency": "RUB",
+   "url": "https://vkusvill.ru/goods/maslo-olivkovoe-canoliva-extra-virgin-steklo-1-l-ispaniya-98066/",
+   "price": 2203.0,
+   "price_status": "listed",
+   "in_stock": true
+  },
+  "maslo-friture-10l": {
+   "shop": "vkusvill.ru",
+   "title": "Масло фритюрное — не найдено (поиск выдаёт только оливковые/прочие масла)",
+   "currency": "RUB",
+   "url": "https://vkusvill.ru/search/?q=%D0%BC%D0%B0%D1%81%D0%BB%D0%BE%20%D1%84%D1%80%D0%B8%D1%82%D1%8E%D1%80%D0%BD%D0%BE%D0%B5",
+   "price": null,
+   "price_status": "unknown",
+   "in_stock": false
+  },
+  "pasta-casarecce-500g": {
+   "shop": "vkusvill.ru",
+   "title": "Паста казаречче — не найдена (поиск пуст)",
+   "currency": "RUB",
+   "url": "https://vkusvill.ru/search/?q=%D0%BA%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D1%87%D1%87%D0%B5",
+   "price": null,
+   "price_status": "unknown",
+   "in_stock": false
+  },
+  "pasta-linguine-500g": {
+   "shop": "vkusvill.ru",
+   "title": "Паста лингвини — не найдена (поиск выдаёт спагетти и готовые блюда)",
+   "currency": "RUB",
+   "url": "https://vkusvill.ru/search/?q=%D0%BB%D0%B8%D0%BD%D0%B3%D0%B2%D0%B8%D0%BD%D0%B8",
+   "price": null,
+   "price_status": "unknown",
+   "in_stock": false
+  },
+  "pasta-rigatoni-500g": {
+   "shop": "vkusvill.ru",
+   "title": "Паста ригатони (сухая) — не найдена (только готовое блюдо «Паста ригатони в томатном соусе с беконом»)",
+   "currency": "RUB",
+   "url": "https://vkusvill.ru/search/?q=%D1%80%D0%B8%D0%B3%D0%B0%D1%82%D0%BE%D0%BD%D0%B8",
+   "price": null,
+   "price_status": "unknown",
+   "in_stock": false
+  }
+ }
+}

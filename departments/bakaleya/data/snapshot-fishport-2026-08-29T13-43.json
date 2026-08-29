@@ -1,0 +1,71 @@
+{
+  "taken_at": "2026-08-29T13:43:18+03:00",
+  "source": "fishport.com",
+  "source_status": "ok",
+  "note": "живой парсинг 29.08 13:43, HoReCa-оптовик fishport.com, цены открыты без логина, метод: python urllib с browser User-Agent, категории /horeca/catalog/muka/, /horeca/catalog/maslo-rastitelnoe/, /horeca/catalog/makaronnye-izdeliya/, /horeca/catalog/pasta_1/ и бренд-страница /brands/de_cecco/; цена бралась из блока product-item-price-current (базовая, без учёта скидок). Casarecce и Rigatoni (в т.ч. De Cecco) в каталоге и поиске сайта не найдены (есть Penne Rigate, но это не Rigatoni) — поиск /search/index.php?q=... отдавал 404, других способов поиска в тайм-боксе не нашлось.",
+  "items": {
+    "muka-pizza-00-25kg": {
+      "shop": "fishport.com",
+      "title": "Мука MOLINO GRASSI ОО для пиццы из мягких сортов пшеницы 25 кг.",
+      "price": 3200,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true,
+      "url": "https://fishport.com/horeca/catalog/dlya-pitstsy/muka-molino-grassi-oo-dlya-pitstsy-iz-myagkikh-sortov-pshenitsy-25-kg_1/"
+    },
+    "maslo-rast-1l": {
+      "shop": "fishport.com",
+      "title": "Масло подсолнечное Олейна 1 л. (5-литровой фасовки в каталоге не найдено)",
+      "price": 140,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true,
+      "url": "https://fishport.com/horeca/catalog/podsolnechnoe/maslo-podsolnechnoe-oleyna-1-l/"
+    },
+    "maslo-oliv-ev-5l": {
+      "shop": "fishport.com",
+      "title": "Масло оливковое Fioreli Extra Virgin ж/б 5л",
+      "price": 1300,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true,
+      "url": "https://fishport.com/horeca/catalog/olivkovoe/maslo-olivkovoe-fioreli-extra-virgin-zh-b-5l/"
+    },
+    "maslo-friture-5l": {
+      "shop": "fishport.com",
+      "title": "Масло фритюрное Pechagin Professional 5 л.",
+      "price": 810,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true,
+      "url": "https://fishport.com/horeca/catalog/frityurnoe/maslo-frityurnoe-pechagin-professional-5-l/"
+    },
+    "pasta-casarecce-500g": {
+      "shop": "fishport.com",
+      "title": "Паста Casarecce — не найдена в каталоге fishport.com",
+      "price": null,
+      "currency": "RUB",
+      "price_status": "unknown",
+      "in_stock": false,
+      "url": "https://fishport.com/horeca/catalog/makaronnye-izdeliya/"
+    },
+    "pasta-linguine-500g": {
+      "shop": "fishport.com",
+      "title": "№7 Лингвини Де Чекко 500 г.",
+      "price": 240,
+      "currency": "RUB",
+      "price_status": "listed",
+      "in_stock": true,
+      "url": "https://fishport.com/horeca/catalog/spagetti/7-lingvini-de-chekko-500-g/"
+    },
+    "pasta-rigatoni-500g": {
+      "shop": "fishport.com",
+      "title": "Паста Rigatoni — не найдена (есть только Penne Rigate Де Чекко 500 г.)",
+      "price": null,
+      "currency": "RUB",
+      "price_status": "unknown",
+      "in_stock": false,
+      "url": "https://fishport.com/horeca/catalog/makaronnye-izdeliya/"
+    }
+  }
+}
