@@ -15,7 +15,7 @@ import json
 from pathlib import Path
 
 from core.theme import CSS, FONTS
-from parsers.catalog import build_per_kg
+from parsers.catalog import build_per_kg, is_benchmark
 from parsers.matching import CUT, STATE, VIEW, WEIGHTS
 
 EXTRA = """
@@ -71,6 +71,23 @@ margin-bottom:10px;font-size:14px}
 """
 
 
+# Что подключено — видно на вкладке «Источники». Что НЕ подключено — тоже
+# должно быть видно: пустая строка поиска без этого списка читается как
+# «товара нет на рынке», хотя правда — «у нас нет источника с этим товаром».
+PLANNED = [
+    ("Прямые прайсы мясокомбинатов (PDF/Excel по запросу)",
+     "закрывает премиальные отрубы — рибай, вырезку: их нет ни в одной "
+     "открытой витрине"),
+    ("Морепродукты: специализированные оптовики",
+     "осьминог, сибас, гребешок — сейчас закрыты только Фуд Сити диапазоном"),
+    ("Вторые снимки по всем поставщикам",
+     "динамика «что изменилось со вчера» требует двух дат; у большинства "
+     "источников снимок пока один"),
+    ("Кросс-док и условия поставки",
+     "цена без минимальной партии и логистики — половина ответа"),
+]
+
+
 def collect(dept="departments/myaso/data") -> dict:
     snaps = [json.loads(Path(p).read_text(encoding="utf-8"))
              for p in sorted(glob.glob(f"{dept}/*.json"))]
@@ -95,7 +112,24 @@ def collect(dept="departments/myaso/data") -> dict:
                            "shop": item.get("shop") or snap["source"],
                            "t": (item.get("title") or "")[:100],
                            "src": snap["source"], "basis": "как у источника"})
-    return {"offers": offers,
+    sources = []
+    for snap in snaps:
+        items = snap.get("items", {})
+        sources.append({
+            "name": snap.get("source", ""),
+            "role": ("справка" if is_benchmark(snap.get("source", ""))
+                     else "поставщик"),
+            "at": (snap.get("taken_at") or "")[:16].replace("T", " "),
+            "n": len(items),
+            "ok": snap.get("source_status") == "ok"})
+    sources.sort(key=lambda x: (x["role"] != "поставщик", x["name"]))
+
+    nom = Path("departments/myaso/nomenclature.json")
+    purchase = (json.loads(nom.read_text(encoding="utf-8")).get("items", [])
+                if nom.exists() else [])
+
+    return {"offers": offers, "sources": sources, "purchase": purchase,
+            "planned": PLANNED,
             "view": {k: list(v) for k, v in VIEW.items()},
             "cut": {k: list(v) for k, v in CUT.items()},
             "state": {k: list(v) for k, v in STATE.items()},
@@ -115,6 +149,7 @@ BODY = """
 <div class="tabs" role="tablist">
   <button class="tab" role="tab" aria-selected="true" data-t="find">Найти товар</button>
   <button class="tab" role="tab" aria-selected="false" data-t="check">Проверить сопоставление</button>
+  <button class="tab" role="tab" aria-selected="false" data-t="src">Источники и планы</button>
 </div>
 
 <section id="find">
@@ -134,6 +169,10 @@ BODY = """
   </div>
   <div class="chips" id="pairs"></div>
   <div id="out"></div>
+</section>
+
+<section id="src" hidden>
+  <div id="srcout"></div>
 </section>
 
 <p class="dim" id="foot" style="margin-top:56px;padding-top:22px;
@@ -179,6 +218,14 @@ function render(q){const res=document.getElementById('res');
   h+=`<tr><td>${esc(o.t)}<br><span class=dim>${esc(o.shop.replace(tel,''))} ${tel?`<span class=tel>${esc(tel)}</span>`:''}</span></td>
   <td><span class="tg sup">поставщик</span></td><td class=num>${money(o.p)} ₽</td></tr>`});
  h+='</table>';
+ const buy=D.purchase.filter(p=>p.purchase_price)
+  .map(p=>({p,s:score(q,p.customer_name).s})).filter(x=>x.s>=0.6)
+  .sort((a,b)=>b.s-a.s)[0];
+ if(buy){const d=best?(best.o.p/buy.p.purchase_price-1)*100:null;
+  h+=`<h3 class=sec>Мы это закупаем сейчас</h3><table class=t>
+  <tr><td>${esc(buy.p.customer_name)}<br><span class=dim>ТН ВЭД ${esc(buy.p.tnved||'—')} · совпадение ${buy.s.toFixed(2)}</span></td>
+  <td class=num>${money(buy.p.purchase_price)} ₽/кг</td>
+  <td class=num>${d===null?'':(d<0?`<b style="color:#047857">дешевле на ${Math.abs(d).toFixed(0)}%</b>`:`<b style="color:#b91c1c">дороже на ${d.toFixed(0)}%</b>`)}</td></tr></table>`}
  if(ben.length){h+='<h3 class=sec>Для сравнения — цены рынка</h3><table class=t>';
   ben.slice(0,6).forEach(({o})=>{h+=`<tr><td class=dim>${esc(o.t)}<br><span class=dim>${esc(o.src)}</span></td>
    <td><span class="tg ref">не продаёт</span></td><td class="num dim">${money(o.p)} ₽</td></tr>`});
@@ -208,7 +255,8 @@ function check(){const a=document.getElementById('a').value,b=document.getElemen
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
  document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));
  document.getElementById('find').hidden=t.dataset.t!=='find';
- document.getElementById('check').hidden=t.dataset.t!=='check'});
+ document.getElementById('check').hidden=t.dataset.t!=='check';
+ document.getElementById('src').hidden=t.dataset.t!=='src'});
 document.getElementById('q').addEventListener('input',e=>render(e.target.value));
 document.getElementById('chips').onclick=e=>{if(e.target.dataset.c){
  document.getElementById('q').value=e.target.dataset.c;render(e.target.dataset.c)}};
@@ -218,6 +266,36 @@ document.getElementById('pairs').onclick=e=>{const i=e.target.dataset.p;
 ['a','b'].forEach(id=>document.getElementById(id).addEventListener('input',check));
 document.getElementById('foot').textContent=
  `В индексе ${D.offers.length} предложений. Цены приведены к килограмму там, где в названии есть вес. Справочные источники — Росстат, Еврокомиссия, розничный потолок Москвы — не продают и в подбор не идут.`;
+
+// ── Источники: что подключено, чем меряем, что в планах ──
+(function(){
+ const fresh=a=>{if(!a)return'';const d=new Date(a.replace(' ','T'));
+  const h=Math.round((Date.now()-d)/36e5);
+  return h<24?`<span class=tg style="background:#ecfdf5;color:#047857">сегодня</span>`
+   :h<72?`<span class=tg style="background:#fffbeb;color:#92400e">${Math.round(h/24)} дн. назад</span>`
+   :`<span class=tg style="background:#fef2f2;color:#b91c1c">${Math.round(h/24)} дн. назад — устарело</span>`};
+ const sup=D.sources.filter(s=>s.role==='поставщик'),ref=D.sources.filter(s=>s.role==='справка');
+ let h=`<h3 class=sec>Подключено сейчас — ${sup.length} поставщиков</h3>
+ <p class=dim style="margin:0 0 10px">У них можно купить. Это те, чьи цены попадают в подбор.</p><table class=t>`;
+ sup.forEach(s=>{h+=`<tr><td>${esc(s.name)}<br><span class=dim>${s.n} позиций</span></td>
+  <td><span class="tg sup">поставщик</span></td><td class="num dim">${esc(s.at)} ${fresh(s.at)}</td></tr>`});
+ h+=`</table><h3 class=sec>С чем сравниваем — ${ref.length} справочных источника</h3>
+ <p class=dim style="margin:0 0 10px">Не продают. Дают опорную линию рынка: Росстат — российские
+ недельные цены, Еврокомиссия — европейские оптовые, розница Москвы — потолок сверху.</p><table class=t>`;
+ ref.forEach(s=>{h+=`<tr><td class=dim>${esc(s.name)}<br><span class=dim>${s.n} позиций</span></td>
+  <td><span class="tg ref">не продаёт</span></td><td class="num dim">${esc(s.at)} ${fresh(s.at)}</td></tr>`});
+ h+='</table>';
+ const withp=D.purchase.filter(p=>p.purchase_price);
+ if(withp.length){h+=`<h3 class=sec>Закупочные цены заказчика — база сравнения</h3>
+  <p class=dim style="margin:0 0 10px">Инструмент отвечает не «где дешевле вообще», а «дешевле, чем мы покупаем сейчас».</p><table class=t>`;
+  D.purchase.forEach(p=>{h+=`<tr><td>${esc(p.customer_name)}<br><span class=dim>ТН ВЭД ${esc(p.tnved||'—')} · ${esc(p.tnved_title||'')}</span></td>
+   <td class="num">${p.purchase_price?money(p.purchase_price)+' ₽/кг':'<span class=dim>цену не дали</span>'}</td></tr>`});
+  h+='</table>'}
+ h+=`<h3 class=sec>Что в планах — чего сейчас не хватает</h3>
+ <p class=dim style="margin:0 0 10px">Пустой ответ по товару почти всегда значит «у нас нет источника с ним», а не «его нет на рынке». Вот чем это закрывается.</p><table class=t>`;
+ D.planned.forEach(([what,why])=>{h+=`<tr><td>${esc(what)}<br><span class=dim>${esc(why)}</span></td></tr>`});
+ h+='</table>';
+ document.getElementById('srcout').innerHTML=h})();
 render('');check();
 """
 
