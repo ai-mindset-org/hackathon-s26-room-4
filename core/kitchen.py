@@ -33,7 +33,21 @@ def dept_summary(dept_dir):
         snaps = [p for p in data.glob("*.json")]
         return {"pairs": [], "n_snaps": len(snaps)}
     d = dg.build_digest(pairs)
-    n_items = sum(len(b["items"]) for _, b, _ in pairs)
+    # позиции считаем по последнему снимку КАЖДОГО источника, включая те,
+    # у которых пары ещё нет — они под надзором, просто без диффа
+    import json as _json
+    from core import snapshot as _snap
+    latest = {}
+    for p_ in sorted(data.glob("*.json")):
+        try:
+            s_ = _snap.load(p_)
+        except (_json.JSONDecodeError, KeyError):
+            continue
+        key = s_["source"] or p_.parent.name
+        if key not in latest or s_["taken_at"] > latest[key]["taken_at"]:
+            latest[key] = s_
+    n_items = sum(len(s_["items"]) for s_ in latest.values()
+                  if s_.get("source_status") == "ok")
     return {"pairs": pairs, "digest": d, "n_items": n_items,
             "n_snaps": len(list(data.glob("*.json")))}
 
