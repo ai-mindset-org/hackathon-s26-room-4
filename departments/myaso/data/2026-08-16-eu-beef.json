@@ -1,67 +1,67 @@
 {
  "taken_at": "2026-08-16T00:00:00",
- "source": "ec.europa.eu/beef",
+ "source": "эталон ЕС · beef (не поставщик)",
  "source_status": "ok",
  "items": {
-  "heifers": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Heifers (€/100Kg)",
+  "говядина-тёлки-туша": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Говядина, тёлки (туша)",
    "price": 641.74,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "steers": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Steers (€/100Kg)",
+  "говядина-волы-туша": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Говядина, волы (туша)",
    "price": 593.0,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "young-cattle": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Young cattle (€/100Kg)",
+  "говядина-молодняк-туша": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Говядина, молодняк (туша)",
    "price": 525.0,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "young-bulls": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Young bulls (€/100Kg)",
+  "говядина-молодые-бычки-туша": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Говядина, молодые бычки (туша)",
    "price": 665.33,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "cows": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Cows (€/100Kg)",
+  "говядина-коровы-туша": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Говядина, коровы (туша)",
    "price": 528.0,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "bulls": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Bulls (€/100Kg)",
+  "говядина-быки-туша": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Говядина, быки (туша)",
    "price": 675.84,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "calves-slaughtered-<8m": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Calves slaughtered <8M (€/100Kg)",
+  "телятина-до-8-месяцев-туша": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Телятина, до 8 месяцев (туша)",
    "price": 802.09,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "adult-male-indicative-price": {
-   "shop": "ec.europa.eu/beef",
-   "title": "Adult male indicative price (€/100Kg)",
+  "говядина-взрослый-скот-индикатив": {
+   "shop": "эталон ЕС · beef (не поставщик)",
+   "title": "Говядина, взрослый скот (индикатив)",
    "price": 644.45,
    "currency": "EUR",
    "price_status": "listed",

@@ -99,7 +99,7 @@ def snapshots(path: str | Path, year: int = 2026, weeks: int = 2,
                 "in_stock": price is not None,
             })
         result.append(build_snapshot(
-            "rosstat.gov.ru/недельные-цены", items,
+            "эталон Росстат · средняя по РФ (не поставщик)", items,
             taken_at=when.isoformat(timespec="seconds")))
     return result
 
