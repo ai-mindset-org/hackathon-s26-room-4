@@ -45,23 +45,30 @@ def _fmt_pct(pct):
     return f"{sign}{abs(pct):.1f}%"
 
 
+def _event_name(ev):
+    """Тип помогает закупщику читать SKU; для остальных отделов — прежний вид."""
+    equipment_type = ev.get("equipment_type")
+    return f'{equipment_type} · {ev["sku"]}' if equipment_type else ev["sku"]
+
+
 def event_line(ev):
     t = ev["type"]
+    name = _event_name(ev)
     if t == "price_change":
         arrow = "↑" if ev["pct"] > 0 else "↓"
-        return (f'{ev["sku"]}: {_fmt_price(ev["from"])} → {_fmt_price(ev["to"])}, '
+        return (f'{name}: {_fmt_price(ev["from"])} → {_fmt_price(ev["to"])}, '
                 f'**{_fmt_pct(ev["pct"])}** {arrow}')
     if t == "back_in_stock":
         note = f' ({ev["note"]})' if ev.get("note") else ""
-        return f'{ev["sku"]}: **появился в наличии**{note}'
+        return f'{name}: **появился в наличии**{note}'
     if t == "out_of_stock":
-        return f'{ev["sku"]}: **пропал из наличия**'
+        return f'{name}: **пропал из наличия**'
     if t == "gone":
-        return f'{ev["sku"]}: **пропал из выдачи** (не путать со снижением цены)'
+        return f'{name}: **пропал из выдачи** (не путать со снижением цены)'
     if t == "new_item":
-        return f'{ev["sku"]}: **новая позиция**, {_fmt_price(ev.get("to"))}'
+        return f'{name}: **новая позиция**, {_fmt_price(ev.get("to"))}'
     if t == "not_comparable":
-        return f'{ev["sku"]}: цена не сравнивается ({ev.get("note", "")})'
+        return f'{name}: цена не сравнивается ({ev.get("note", "")})'
     if t == "source_unreachable":
         return f'источник **{ev["title"]}**: недоступен, позиции не считаются пропавшими'
     if t == "source_recovered":
