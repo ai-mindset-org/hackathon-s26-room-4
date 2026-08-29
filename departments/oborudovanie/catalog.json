@@ -1,4 +1,11 @@
 {
+  "equipment_types": {
+    "HICOLD-GNE-22-BT": "Морозильный стол",
+    "APACH-AC800DIG-PSDD": "Купольная посудомоечная машина",
+    "APACH-CHEF-LINE-SLDI7I4": "Встраиваемая индукционная плита",
+    "BREMA-CB-425W-HC": "Льдогенератор",
+    "NUOVA-SIMONELLI-APPIA-LIFE-1GR-S": "Кофемашина"
+  },
   "sources": [
     {
       "source": "klenmarket.ru",
@@ -7,16 +14,19 @@
       "items": [
         {
           "sku": "APACH-CHEF-LINE-SLDI7I4",
+          "equipment_type": "Встраиваемая индукционная плита",
           "title": "Плита индукционная встраиваемая 700 сер. APACH CHEF LINE SLDI7I4",
           "url": "https://www.klenmarket.ru/shop/equipment/the-thermal-equipment/plate/plate-induction/plita-induktsionnaia-vstraivaemaia-700-ser-apach-chef-line-sldi7i4/"
         },
         {
           "sku": "APACH-AC800DIG-PSDD",
+          "equipment_type": "Купольная посудомоечная машина",
           "title": "Машина посудомоечная APACH AC800DIG PSDD купольная с помпой",
           "url": "https://www.klenmarket.ru/shop/equipment/dishwashers/kupolnye/mashina-posudomoechnaia-apach-ac800dig-psdd-kupolnaia-s-pompoi/"
         },
         {
           "sku": "BREMA-CB-425W-HC",
+          "equipment_type": "Льдогенератор",
           "title": "Льдогенератор Brema CB 425W HC",
           "url": "https://www.klenmarket.ru/shop/equipment/refrigeration-equipment/ice-generators/ice-ice-kubikovogo/ldogenerator-brema-cb-425w-hc/"
         }
