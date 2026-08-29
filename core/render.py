@@ -19,7 +19,8 @@ def _stat(label, value, cls=""):
             f'<div class="value {cls}">{value}</div></div>')
 
 
-def to_html(d, title="Мониторинг → дайджест · комната 4", back="index.html"):
+def to_html(d, title="Мониторинг → дайджест · комната 4", back="index.html",
+            extra_link=None):
     c = d["counts"]
     honest = d["sources_ok"] < d["sources_total"]
     parts = [theme.head(_html.escape(title)), theme.CANVAS,
@@ -31,6 +32,8 @@ def to_html(d, title="Мониторинг → дайджест · комнат�
              f'{d["thresholds"]["red"]:g}% <span class="dot amber"></span> '
              f'рост ≥ {d["thresholds"]["warn"]:g}% <span class="dot green">'
              f'</span> подешевело ≥ {d["thresholds"]["warn"]:g}%</div>',
+             (f'<div class="lede"><a class="dash-link" href="{extra_link[0]}">'
+              f'{extra_link[1]}</a></div>' if extra_link else ""),
              '<div class="stats">',
              _stat("подорожало сильно", c["red"], "grad" if c["red"] else ""),
              _stat("подорожало", c["warn"]),
