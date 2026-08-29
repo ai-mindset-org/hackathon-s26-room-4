@@ -1,11 +1,11 @@
 {
  "taken_at": "2026-08-16T00:00:00",
- "source": "ec.europa.eu/pigmeat",
+ "source": "эталон ЕС · pigmeat (не поставщик)",
  "source_status": "ok",
  "items": {
-  "pigmeat": {
-   "shop": "ec.europa.eu/pigmeat",
-   "title": "pigmeat (100 KG)",
+  "свинина-туша": {
+   "shop": "эталон ЕС · pigmeat (не поставщик)",
+   "title": "Свинина (туша)",
    "price": 131.61,
    "currency": "EUR",
    "price_status": "listed",

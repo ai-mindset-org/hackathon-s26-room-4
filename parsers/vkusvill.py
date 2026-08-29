@@ -70,7 +70,7 @@ def snapshot(category: str = "мясо-птица") -> dict:
     try:
         page = fetch(url)
     except Exception as exc:
-        return build_snapshot(f"vkusvill.ru/{category}", [],
+        return build_snapshot(f"ВкусВилл · розница · {category}", [],
                               status="unreachable")
 
     items = []
@@ -99,7 +99,7 @@ def snapshot(category: str = "мясо-птица") -> dict:
         })
 
     status = "ok" if items else "unreachable"
-    return build_snapshot(f"vkusvill.ru/{category}", items, status=status)
+    return build_snapshot(f"ВкусВилл · розница · {category}", items, status=status)
 
 
 def main(argv: list[str]) -> int:

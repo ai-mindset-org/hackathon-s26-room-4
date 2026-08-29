@@ -1,27 +1,27 @@
 {
  "taken_at": "2026-08-23T00:00:00",
- "source": "ec.europa.eu/poultry",
+ "source": "эталон ЕС · poultry (не поставщик)",
  "source_status": "ok",
  "items": {
-  "breast-fillet": {
-   "shop": "ec.europa.eu/poultry",
-   "title": "Breast Fillet (national currency/100kg)",
+  "курица-филе-грудки": {
+   "shop": "эталон ЕС · poultry (не поставщик)",
+   "title": "Курица, филе грудки",
    "price": 680.5,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "legs": {
-   "shop": "ec.europa.eu/poultry",
-   "title": "Legs (national currency/100kg)",
+  "курица-окорочка": {
+   "shop": "эталон ЕС · poultry (не поставщик)",
+   "title": "Курица, окорочка",
    "price": 276.23,
    "currency": "EUR",
    "price_status": "listed",
    "in_stock": true
   },
-  "0207-11-30": {
-   "shop": "ec.europa.eu/poultry",
-   "title": "0207 11 30 (national currency/100kg)",
+  "курица-тушка-целиком": {
+   "shop": "эталон ЕС · poultry (не поставщик)",
+   "title": "Курица, тушка целиком",
    "price": 261.11,
    "currency": "EUR",
    "price_status": "listed",

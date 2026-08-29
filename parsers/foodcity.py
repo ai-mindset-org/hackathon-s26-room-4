@@ -122,9 +122,9 @@ def snapshots(page: str | None = None,
         })
 
     return [
-        build_snapshot("foodcity.ru/опт", wholesale,
+        build_snapshot("Фуд Сити · ОПТ поставщиков", wholesale,
                        status="ok" if wholesale else "unreachable"),
-        build_snapshot("москва/розница", retail,
+        build_snapshot("Москва · розница (для сравнения)", retail,
                        status="ok" if retail else "unreachable"),
     ]
 

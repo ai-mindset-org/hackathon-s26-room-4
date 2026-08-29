@@ -26,6 +26,32 @@ from parsers.snapshot import build_snapshot
 BASE = "https://www.ec.europa.eu/agrifood/api"
 PRODUCTS = ("poultry", "beef", "pigmeat", "sugar", "rawMilk")
 
+# Ключи API английские и техничные («cows», «0207 11 30»). В дайджест их пускать
+# нельзя: закупщик должен читать товар, а не идентификатор источника.
+RU_NAMES = {
+    "cows": "Говядина, коровы (туша)",
+    "bulls": "Говядина, быки (туша)",
+    "young bulls": "Говядина, молодые бычки (туша)",
+    "young cattle": "Говядина, молодняк (туша)",
+    "heifers": "Говядина, тёлки (туша)",
+    "steers": "Говядина, волы (туша)",
+    "calves slaughtered 8m": "Телятина, до 8 месяцев (туша)",
+    "adult male indicative price": "Говядина, взрослый скот (индикатив)",
+    "breast fillet": "Курица, филе грудки",
+    "legs": "Курица, окорочка",
+    "0207 11 30": "Курица, тушка целиком",
+    "pigmeat": "Свинина (туша)",
+    "raw milk": "Молоко сырое",
+    "sugar": "Сахар",
+}
+
+
+def human_name(raw, fallback=""):
+    """Английский ключ источника → название, понятное закупщику."""
+    key = re.sub(r"[^\w ]", " ", str(raw or "").lower())
+    key = re.sub(r"\s+", " ", key).strip()
+    return RU_NAMES.get(key) or RU_NAMES.get(str(fallback).lower()) or (raw or fallback)
+
 
 def fetch_series(product: str, country: str = "HR", year: int = 2026) -> list[dict]:
     url = f"{BASE}/{product}/prices?memberStateCodes={country}&years={year}"
@@ -52,12 +78,18 @@ def _name(record: dict) -> str:
     return ""
 
 
+def _slug(text: str) -> str:
+    clean = re.sub(r"[^\wа-яёА-ЯЁ ]", " ", str(text or "").lower())
+    return re.sub(r"\s+", "-", clean.strip())[:60].strip("-")
+
+
 def _sku(record: dict, fallback: str = "") -> str:
     """Свинина в этом API приходит вообще без названия товара — только цена и
     единица. Тогда позицией становится сам раздел (`pigmeat`), а не «unknown»:
     строка в дайджесте должна быть читаемой человеком."""
-    name = _name(record) or fallback
-    return re.sub(r"\s+", "-", name.lower()) or "unknown"
+    # Ключ позиции печатается в дайджесте как название товара,
+    # поэтому он должен быть читаемым человеком, а не идентификатором API.
+    return _slug(human_name(_name(record), fallback)) or "unknown"
 
 
 def snapshots_by_week(records: list[dict], source: str,
@@ -78,8 +110,7 @@ def snapshots_by_week(records: list[dict], source: str,
         weeks[taken.isoformat(timespec="seconds")].append({
             "sku": _sku(record, fallback_name),
             "shop": source,
-            "title": f'{_name(record) or fallback_name} '
-                     f'({record.get("unit", "")})'.strip(),
+            "title": human_name(_name(record), fallback_name),
             "price": price,
             "currency": "EUR",
             "price_status": "listed" if price is not None else "unknown",
@@ -93,7 +124,7 @@ def snapshots_by_week(records: list[dict], source: str,
 
 def latest_pair(product: str, country: str = "HR", year: int = 2026) -> list[dict]:
     """Два последних недельных снимка — ровно то, что ест `core/`."""
-    source = f"ec.europa.eu/{product}"
+    source = f"эталон ЕС · {product} (не поставщик)"
     return snapshots_by_week(
         fetch_series(product, country, year), source, fallback_name=product)[-2:]
 
