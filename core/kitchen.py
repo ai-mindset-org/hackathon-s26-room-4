@@ -95,8 +95,15 @@ def build_site(root=".", site="site"):
                     f' · снимки {s["n_snaps"]} · {d["date_from"]} → {d["date_to"]}')
             cls = ""
             page = site_dir / f'dept-{meta["code"]}.html'
+            extra = None
+            if own_page.exists():
+                # замысел PR #58 (milexx): карточка ведёт в движковый дайджест,
+                # своя таблица отдела — справочной ссылкой внутри него
+                extra = (f'dept-{meta["code"]}-own.html',
+                         "таблица последних известных цен отдела ↗")
             page.write_text(render.to_html(
-                d, title=f'{meta["emoji"]} {meta["title"]} · {meta["owner"]}'),
+                d, title=f'{meta["emoji"]} {meta["title"]} · {meta["owner"]}',
+                extra_link=extra),
                 encoding="utf-8")
             href = page.name
         elif s and s.get("n_snaps") and not href:
@@ -108,7 +115,8 @@ def build_site(root=".", site="site"):
             own_copy.write_text(
                 own_page.read_text(encoding="utf-8").replace("../../site/", ""),
                 encoding="utf-8")
-            href = own_copy.name
+            if not href:
+                href = own_copy.name
             cls = ""
             stat += " · своя страница ↗"
 
@@ -159,6 +167,7 @@ def build_site(root=".", site="site"):
             + '<div class="page">'
             '<nav><a class="brand" href="./">🍽 КУХНЯ · комната 4</a>'
             f'<span class="links"><a href="{REPO}">Репозиторий</a>'
+            '<a href="search.html">Найти товар</a>'
             '<a href="digest.html">Дайджест</a></span></nav>'
             '<h1>Кухня следит за ценами, пока закупщики готовят.</h1>'
             '<div class="lede">Пять отделов ресторана мониторят закупочные '
