@@ -63,6 +63,15 @@ def build_site(root=".", site="site"):
         s = dept_summary(dept_dir)
 
         own_page = dept_dir / "index.html"
+        reference_href = None
+        if own_page.exists():
+            # Netlify публикует только site/. Своя страница отдела — это
+            # справочный материал, а не замена общего движка дайджеста.
+            own_copy = site_dir / f'dept-{meta["code"]}-own.html'
+            own_copy.write_text(
+                own_page.read_text(encoding="utf-8").replace("../../site/", ""),
+                encoding="utf-8")
+            reference_href = own_copy.name
         href, cls, stat = None, "empty", "ждёт первых снимков"
         if not (s and s.get("pairs")):
             # своих снимков нет — показываем ОБРАЗЕЦ дайджеста, чтобы было
@@ -74,7 +83,8 @@ def build_site(root=".", site="site"):
                 page = site_dir / f'dept-{meta["code"]}.html'
                 page.write_text(render.to_html(
                     d_smp, title=f'{meta["emoji"]} {meta["title"]} — ОБРАЗЕЦ '
-                    'дайджеста (замени данными своего отдела)'), encoding="utf-8")
+                    'дайджеста (замени данными своего отдела)',
+                    reference_href=reference_href), encoding="utf-8")
                 href, cls = page.name, "empty"
                 if s and s.get("n_snaps"):
                     stat = (f'снимков: <b>{s["n_snaps"]}</b> — для сравнения '
@@ -96,21 +106,14 @@ def build_site(root=".", site="site"):
             cls = ""
             page = site_dir / f'dept-{meta["code"]}.html'
             page.write_text(render.to_html(
-                d, title=f'{meta["emoji"]} {meta["title"]} · {meta["owner"]}'),
+                d, title=f'{meta["emoji"]} {meta["title"]} · {meta["owner"]}',
+                reference_href=reference_href),
                 encoding="utf-8")
             href = page.name
         elif s and s.get("n_snaps") and not href:
             stat = f'снимков: {s["n_snaps"]} — нужен второй для сравнения'
-        if own_page.exists():
-            # копия в site/ — на деплой уходит только эта папка;
-            # ссылку «назад» в копии приводим к корню сайта
-            own_copy = site_dir / f'dept-{meta["code"]}-own.html'
-            own_copy.write_text(
-                own_page.read_text(encoding="utf-8").replace("../../site/", ""),
-                encoding="utf-8")
-            href = own_copy.name
-            cls = ""
-            stat += " · своя страница ↗"
+        if reference_href:
+            stat += " · текущие цены — на странице отдела"
 
         cards.append(
             f'<a class="card {cls}" {"href=" + chr(34) + href + chr(34) if href else ""}>'

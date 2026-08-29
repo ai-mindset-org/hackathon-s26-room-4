@@ -19,7 +19,8 @@ def _stat(label, value, cls=""):
             f'<div class="value {cls}">{value}</div></div>')
 
 
-def to_html(d, title="Мониторинг → дайджест · комната 4", back="index.html"):
+def to_html(d, title="Мониторинг → дайджест · комната 4", back="index.html",
+            reference_href=None):
     c = d["counts"]
     honest = d["sources_ok"] < d["sources_total"]
     parts = [theme.head(_html.escape(title)), theme.CANVAS,
@@ -52,6 +53,9 @@ def to_html(d, title="Мониторинг → дайджест · комнат�
     if d["unchanged"]:
         parts.append(f'<div class="unchanged">Без изменений: {d["unchanged"]} '
                      'позиций — свернуто.</div>')
+    if reference_href:
+        parts.append(f'<p><a class="back" href="{_html.escape(reference_href)}">'
+                     'Справочно: последние известные цены отдела →</a></p>')
     cs = d.get("cross_shop")
     if cs and cs["rows"]:
         parts.append('<h2>Один товар в разных магазинах (сегодня)</h2>'
