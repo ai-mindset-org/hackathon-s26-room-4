@@ -69,8 +69,6 @@ def to_html(d, title="Мониторинг → дайджест · комнат�
                 f'⚠️ без данных сегодня: {", ".join(cs["silent_sources"])} '
                 f'({len(cs["silent_sources"])} из {cs["sources_total"]})'))
         parts.append("</ul>")
-    parts.append('<footer>hackathon-s26-room-4 · «Чужая боль» 29.08.2026 · '
-                 'снимки в departments/*/data, история — в git · интерактив '
-                 'по мотивам <a href="https://github.com/DavidHDev/canvas-ui">'
-                 'canvas-ui</a></footer></div>')
+    parts.append('<footer>hackathon-s26-room-4 · «Чужая боль» 29.08.2026'
+                 '</footer></div>')
     return "\n".join(parts)

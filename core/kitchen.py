@@ -146,10 +146,7 @@ def build_site(root=".", site="site"):
             + stats
             + '<h2>Отделы</h2>'
             f'<div class="grid">{"".join(cards)}</div>'
-            '<footer>hackathon-s26-room-4 · «Чужая боль» 29.08.2026 · снимки '
-            'в departments/*/data, история — в git · стиль по мотивам '
-            '<a href="https://dfinity.org/">dfinity.org</a>, интерактив — '
-            '<a href="https://github.com/DavidHDev/canvas-ui">canvas-ui</a>'
+            '<footer>hackathon-s26-room-4 · «Чужая боль» 29.08.2026'
             '</footer></div>')
     (site_dir / "index.html").write_text(page, encoding="utf-8")
     return site_dir / "index.html"
