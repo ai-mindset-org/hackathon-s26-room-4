@@ -1,5 +1,9 @@
 # Комната 4 · Мониторинг → дайджест
 
+<!-- aim-public-links:start -->
+[Лабы AI Mindset](https://aimindset.org/?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-hackathon-s26-room-4#learning) · [База знаний](https://base.aimindset.org/?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-hackathon-s26-room-4)
+<!-- aim-public-links:end -->
+
 Хакатон AI Mindset S26 «Чужая боль» · 29.08.2026 · 10:00–14:00 CET
 
 ## 🍽 Живой дашборд: https://room4-kitchen.netlify.app
@@ -54,6 +58,6 @@ python3 check.py
 
 ## Кто в комнате
 
-Комната, зум и чекин — https://hackathon-live.aimindset.org/ (блок «мой код»)
-Голосование и итоги — https://hackathon-live.aimindset.org/vote/
-Инструкция агенту — https://hackathon-live.aimindset.org/skill/HACKATHON.md
+Комната, зум и чекин — [hackathon-live.aimindset.org](https://hackathon-live.aimindset.org/?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-hackathon-s26-room-4) (блок «мой код»)
+Голосование и итоги — [hackathon-live.aimindset.org/vote](https://hackathon-live.aimindset.org/vote/?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-hackathon-s26-room-4)
+Инструкция агенту — [hackathon-live.aimindset.org/skill/HACKATHON.md](https://hackathon-live.aimindset.org/skill/HACKATHON.md?utm_source=website&utm_medium=article&utm_campaign=start&utm_content=github-hackathon-s26-room-4)
